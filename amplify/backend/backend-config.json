@@ -28,5 +28,11 @@
         }
       }
     }
+  },
+  "storage": {
+    "todoImages": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

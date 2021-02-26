@@ -8,6 +8,7 @@ export declare class Todo {
   readonly id: string;
   readonly name: string;
   readonly description?: string;
+  readonly image?: string;
   constructor(init: ModelInit<Todo>);
   static copyOf(source: Todo, mutator: (draft: MutableModel<Todo>) => MutableModel<Todo> | void): Todo;
 }
