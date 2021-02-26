@@ -16,8 +16,8 @@ function App() {
   }, []);
 
   async function onChange(e){
-    if(!e.target.file[0]) return;
-    const file = e.target.file[0];
+    if(!e.target.files[0]) return;
+    const file = e.target.files[0];
     setFormData({...formData , image : file.name});
     await Storage.put(file.name , file)
     fetchNotes();
@@ -85,7 +85,7 @@ return note;
               <h2>{note.name}</h2>
               <p>{note.description}</p>
               <button onClick={() => deleteNote(note)}>Delete note</button>
-              note.image && <img src={note.image} style={{width: 400}} />
+              {note.image && <img src={note.image} style={{width: 400}} />}
             </div>
           ))
         }
